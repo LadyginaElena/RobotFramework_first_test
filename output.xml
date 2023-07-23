@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230723 11:44:48.111" rpa="false" schemaversion="4">
+<suite id="s1" name="First Test" source="C:\Users\user\PycharmProjects\RobotFramwork\test_cases\first_test.robot">
+<test id="s1-t1" name="My First Test Case" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230723 11:44:48.361" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/v1'.</msg>
+<msg timestamp="20230723 11:44:48.376" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230723 11:44:48.361" endtime="20230723 11:44:50.904"/>
+</kw>
+<status status="PASS" starttime="20230723 11:44:48.361" endtime="20230723 11:44:50.904"/>
+</test>
+<status status="PASS" starttime="20230723 11:44:48.111" endtime="20230723 11:44:50.906"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="First Test">First Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
