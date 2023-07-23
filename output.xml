@@ -1,18 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230723 11:44:48.111" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230723 15:08:25.958" rpa="false" schemaversion="4">
 <suite id="s1" name="First Test" source="C:\Users\user\PycharmProjects\RobotFramwork\test_cases\first_test.robot">
-<test id="s1-t1" name="My First Test Case" line="5">
+<test id="s1-t1" name="My First Test Case" line="13">
+<kw name="Open Browser and Maximaze" library="resourses">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.saucedemo.com/v1</arg>
-<arg>Chrome</arg>
+<arg>${UserURL}</arg>
+<arg>${BrowserName}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230723 11:44:48.361" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/v1'.</msg>
-<msg timestamp="20230723 11:44:48.376" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230723 11:44:48.361" endtime="20230723 11:44:50.904"/>
+<msg timestamp="20230723 15:08:26.228" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/v1'.</msg>
+<msg timestamp="20230723 15:08:26.248" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230723 15:08:26.228" endtime="20230723 15:08:33.398"/>
 </kw>
-<status status="PASS" starttime="20230723 11:44:48.361" endtime="20230723 11:44:50.904"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230723 15:08:33.398" endtime="20230723 15:08:33.673"/>
+</kw>
+<status status="PASS" starttime="20230723 15:08:26.227" endtime="20230723 15:08:33.673"/>
+</kw>
+<kw name="Login To Website" library="resourses">
+<arg>${StandardUser}</arg>
+<arg>${Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:33.675" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230723 15:08:33.675" endtime="20230723 15:08:33.738"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:33.740" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230723 15:08:33.747" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230723 15:08:33.768" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230723 15:08:33.739" endtime="20230723 15:08:33.768"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:33.769" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230723 15:08:33.769" endtime="20230723 15:08:37.386"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>data-test:error</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20230723 15:08:37.407" level="INFO">Current page does not contain element 'data-test:error'.</msg>
+<status status="PASS" starttime="20230723 15:08:37.386" endtime="20230723 15:08:37.407"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>class:footer_copy</arg>
+<arg>© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230723 15:08:37.435" level="INFO">Element 'class:footer_copy' contains text '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy'.</msg>
+<status status="PASS" starttime="20230723 15:08:37.408" endtime="20230723 15:08:37.435"/>
+</kw>
+<status status="PASS" starttime="20230723 15:08:33.674" endtime="20230723 15:08:37.435"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230723 15:08:37.435" endtime="20230723 15:08:37.524"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230723 15:08:37.525" endtime="20230723 15:08:40.450"/>
+</kw>
+<status status="PASS" starttime="20230723 15:08:26.227" endtime="20230723 15:08:40.451"/>
 </test>
-<status status="PASS" starttime="20230723 11:44:48.111" endtime="20230723 11:44:50.906"/>
+<status status="PASS" starttime="20230723 15:08:25.960" endtime="20230723 15:08:40.452"/>
 </suite>
 <statistics>
 <total>
