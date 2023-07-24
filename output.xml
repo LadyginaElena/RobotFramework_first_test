@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230723 15:08:25.958" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230724 21:30:20.280" rpa="false" schemaversion="4">
 <suite id="s1" name="First Test" source="C:\Users\user\PycharmProjects\RobotFramwork\test_cases\first_test.robot">
 <test id="s1-t1" name="My First Test Case" line="13">
-<kw name="Open Browser and Maximaze" library="resourses">
+<kw name="Open Browser and Maximaze" library="resourses" type="SETUP">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${UserURL}</arg>
 <arg>${BrowserName}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230723 15:08:26.228" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/v1'.</msg>
-<msg timestamp="20230723 15:08:26.248" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230723 15:08:26.228" endtime="20230723 15:08:33.398"/>
+<msg timestamp="20230724 21:30:20.542" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/v1'.</msg>
+<msg timestamp="20230724 21:30:20.562" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230724 21:30:20.542" endtime="20230724 21:30:23.188"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230723 15:08:33.398" endtime="20230723 15:08:33.673"/>
+<status status="PASS" starttime="20230724 21:30:23.188" endtime="20230724 21:30:23.299"/>
 </kw>
-<status status="PASS" starttime="20230723 15:08:26.227" endtime="20230723 15:08:33.673"/>
+<status status="PASS" starttime="20230724 21:30:20.541" endtime="20230724 21:30:23.299"/>
 </kw>
 <kw name="Login To Website" library="resourses">
 <arg>${StandardUser}</arg>
@@ -26,59 +26,158 @@
 <arg>id:user-name</arg>
 <arg>${UserName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230723 15:08:33.675" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20230723 15:08:33.675" endtime="20230723 15:08:33.738"/>
+<msg timestamp="20230724 21:30:23.301" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230724 21:30:23.300" endtime="20230724 21:30:23.432"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:password</arg>
 <arg>${Password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230723 15:08:33.740" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20230723 15:08:33.747" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230723 15:08:33.768" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230723 15:08:33.739" endtime="20230723 15:08:33.768"/>
+<msg timestamp="20230724 21:30:23.433" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230724 21:30:23.471" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230724 21:30:23.530" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230724 21:30:23.432" endtime="20230724 21:30:23.530"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230723 15:08:33.769" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20230723 15:08:33.769" endtime="20230723 15:08:37.386"/>
+<msg timestamp="20230724 21:30:23.531" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230724 21:30:23.531" endtime="20230724 21:30:28.424"/>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>data-test:error</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20230723 15:08:37.407" level="INFO">Current page does not contain element 'data-test:error'.</msg>
-<status status="PASS" starttime="20230723 15:08:37.386" endtime="20230723 15:08:37.407"/>
+<msg timestamp="20230724 21:30:28.442" level="INFO">Current page does not contain element 'data-test:error'.</msg>
+<status status="PASS" starttime="20230724 21:30:28.424" endtime="20230724 21:30:28.443"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>class:footer_copy</arg>
 <arg>© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230723 15:08:37.435" level="INFO">Element 'class:footer_copy' contains text '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy'.</msg>
-<status status="PASS" starttime="20230723 15:08:37.408" endtime="20230723 15:08:37.435"/>
+<msg timestamp="20230724 21:30:28.472" level="INFO">Element 'class:footer_copy' contains text '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy'.</msg>
+<status status="PASS" starttime="20230724 21:30:28.443" endtime="20230724 21:30:28.472"/>
 </kw>
-<status status="PASS" starttime="20230723 15:08:33.674" endtime="20230723 15:08:37.435"/>
+<status status="PASS" starttime="20230724 21:30:23.299" endtime="20230724 21:30:28.472"/>
 </kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20230723 15:08:37.435" endtime="20230723 15:08:37.524"/>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230724 21:30:28.478" level="INFO">${Title} = Swag Labs</msg>
+<status status="PASS" starttime="20230724 21:30:28.473" endtime="20230724 21:30:28.478"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
+<kw name="Get Cookies" library="SeleniumLibrary">
+<var>${Cookies}</var>
+<doc>Returns all cookies of the current page.</doc>
+<msg timestamp="20230724 21:30:28.484" level="INFO">${Cookies} = </msg>
+<status status="PASS" starttime="20230724 21:30:28.479" endtime="20230724 21:30:28.485"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:item_1_img_link</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230724 21:30:28.485" endtime="20230724 21:30:28.513"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id:item_1_img_link</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230724 21:30:28.780" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230724 21:30:28.780" level="FAIL">WebDriverException: Message: unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot take screenshot with 0 width."}
+  (Session info: chrome=114.0.5735.199)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0078A813+48355]
+	(No symbol) [0x0071C4B1]
+	(No symbol) [0x00625358]
+	(No symbol) [0x006189EB]
+	(No symbol) [0x00617138]
+	(No symbol) [0x006177AA]
+	(No symbol) [0x0062C975]
+	(No symbol) [0x0064F245]
+	(No symbol) [0x0066A73C]
+	(No symbol) [0x00649A36]
+	(No symbol) [0x0066AA94]
+	(No symbol) [0x0067C922]
+	(No symbol) [0x0066A536]
+	(No symbol) [0x006482DC]
+	(No symbol) [0x006493DD]
+	GetHandleVerifier [0x009EAABD+2539405]
+	GetHandleVerifier [0x00A2A78F+2800735]
+	GetHandleVerifier [0x00A2456C+2775612]
+	GetHandleVerifier [0x008151E0+616112]
+	(No symbol) [0x00725F8C]
+	(No symbol) [0x00722328]
+	(No symbol) [0x0072240B]
+	(No symbol) [0x00714FF7]
+	BaseThreadInitThunk [0x779100C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77E07B4E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E07B1E+238]
+</msg>
+<status status="FAIL" starttime="20230724 21:30:28.513" endtime="20230724 21:30:28.786"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>class:footer_copy</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20230724 21:30:28.786" endtime="20230724 21:30:28.786"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:footer_copy</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230724 21:30:28.787" endtime="20230724 21:30:28.787"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230724 21:30:28.787" endtime="20230724 21:30:28.787"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20230724 21:30:28.788" endtime="20230724 21:30:28.788"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230723 15:08:37.525" endtime="20230723 15:08:40.450"/>
+<status status="PASS" starttime="20230724 21:30:28.788" endtime="20230724 21:30:30.915"/>
 </kw>
-<status status="PASS" starttime="20230723 15:08:26.227" endtime="20230723 15:08:40.451"/>
+<status status="FAIL" starttime="20230724 21:30:20.541" endtime="20230724 21:30:30.916">WebDriverException: Message: unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot take screenshot with 0 width."}
+  (Session info: chrome=114.0.5735.199)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0078A813+48355]
+	(No symbol) [0x0071C4B1]
+	(No symbol) [0x00625358]
+	(No symbol) [0x006189EB]
+	(No symbol) [0x00617138]
+	(No symbol) [0x006177AA]
+	(No symbol) [0x0062C975]
+	(No symbol) [0x0064F245]
+	(No symbol) [0x0066A73C]
+	(No symbol) [0x00649A36]
+	(No symbol) [0x0066AA94]
+	(No symbol) [0x0067C922]
+	(No symbol) [0x0066A536]
+	(No symbol) [0x006482DC]
+	(No symbol) [0x006493DD]
+	GetHandleVerifier [0x009EAABD+2539405]
+	GetHandleVerifier [0x00A2A78F+2800735]
+	GetHandleVerifier [0x00A2456C+2775612]
+	GetHandleVerifier [0x008151E0+616112]
+	(No symbol) [0x00725F8C]
+	(No symbol) [0x00722328]
+	(No symbol) [0x0072240B]
+	(No symbol) [0x00714FF7]
+	BaseThreadInitThunk [0x779100C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77E07B4E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E07B1E+238]
+</status>
 </test>
-<status status="PASS" starttime="20230723 15:08:25.960" endtime="20230723 15:08:40.452"/>
+<status status="FAIL" starttime="20230724 21:30:20.283" endtime="20230724 21:30:30.924"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="First Test">First Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="First Test">First Test</stat>
 </suite>
 </statistics>
 <errors>

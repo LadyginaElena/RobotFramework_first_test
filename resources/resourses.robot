@@ -11,6 +11,8 @@ Open Browser and Maximaze
     [Arguments]    ${UserURL}    ${BrowserName}
     open browser    ${UserURL}    ${BrowserName}
     maximize browser window
+    #log    Starting test with browser name    ${BrowserName}
+    #log    Test URL  ${${UserURL}}
 
 Login To Website
     [Arguments]    ${UserName}  ${Password}
