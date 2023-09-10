@@ -1,15 +1,19 @@
 *** Settings ***
 Library    SeleniumLibrary
+Variables    ..//resources/webdriverManager.py
+
 
 
 *** Variables ***
 ${BrowserName}    Chrome
 ${UserURL}    https://www.saucedemo.com/v1
+${driver_path}    driver
 
 *** Keywords ***
-Open Browser and Maximaze
+Create Browser and Open and Maximaze
+    create webdriver   ${BrowserName}    driver=${driver_path}
     [Arguments]    ${UserURL}    ${BrowserName}
-    open browser    ${UserURL}    ${BrowserName}
+    #open browser    ${UserURL}    ${BrowserName}
     maximize browser window
     #log    Starting test with browser name    ${BrowserName}
     #log    Test URL  ${${UserURL}}
