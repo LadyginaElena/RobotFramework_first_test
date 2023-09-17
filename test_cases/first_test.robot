@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ..//resources/resourses.robot
-Variables    ..//resources/webdriverManager.py
 
 
 *** Variables ***
@@ -17,18 +16,17 @@ My First Test Case
     [Teardown]    close browser
     Login To Website    ${StandardUser}    ${Password}
     ${Title} =    get title
-    #log  page title is    ${Title}
+    # log  page title is    ${Title}
     ${Cookies}=    get cookies
-    #log    ${Cookies}
+    # log    ${Cookies}
     ${Cookies}=    get location
-    #log    ${Cookies}
-    #location should be
+    # log    ${Cookies}
+    # location should be
     wait until element is visible    id:item_1_img_link
-    capture element screenshot    id:item_1_img_link
     scroll element into view    class:footer_copy
     wait until element is visible    class:footer_copy
     capture page screenshot
-    capture element screenshot    id:item_1_img_link
+    capture element screenshot    class:footer_copy
     set screenshot directory    ../screenshots
 
 
